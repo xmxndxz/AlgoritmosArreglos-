@@ -9,5 +9,7 @@ package algoritmos;
  * @author amand
  */
 public class Nivel1 {
-    
+    public void suma(){
+        
+    }
 }
