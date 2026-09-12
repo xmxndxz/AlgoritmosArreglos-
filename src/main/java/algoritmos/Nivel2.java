@@ -47,6 +47,6 @@ public class Nivel2 {
  
         JOptionPane.showMessageDialog(null,
             "Suma de valores en índices pares: " + sumaPares +
-            "\nSuma de valores en índices impares: " + sumaImpares);
+            "\nSuma de valores en índices impares: " + sumaImpares); 
     }
 }
