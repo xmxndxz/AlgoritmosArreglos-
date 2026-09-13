@@ -1,8 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package main;
+import algoritmos.Menu;
 
 /**
  *
@@ -11,6 +11,7 @@ package main;
 public class AlgoritmosArreglos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Menu.iniciar();
     }
 }
