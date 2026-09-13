@@ -28,13 +28,13 @@ public class Menu {
                     menuNivel1();
                     break;
                 case 2:
-                    //menuNivel2();
+                    menuNivel2();
                     break;
                 case 3:
                     //menuNivel3();
                     break;
                 case 4:
-                   // menuNivel4();
+                    // menuNivel4();
                     break;
                 case 5:
                     //menuNivel5();
@@ -48,8 +48,6 @@ public class Menu {
         } while (opcion != 0);
     }
 
-    
-    
     // Submenú Nivel 1
     private static void menuNivel1() {
         int opcion;
@@ -77,5 +75,33 @@ public class Menu {
             }
         } while (opcion != 0);
     }
+
+    // Submenú Nivel 2
+    private static void menuNivel2() {
+        int opcion;
+        do {
+            String entrada = JOptionPane.showInputDialog(
+                    "NIVEL 2\n"
+                    + "7. Contar vocales en una palabra\n"
+                    + "8. Suma en índices pares e impares\n"
+                    + "0. Volver al menú principal\n"
+                    + "Seleccione una opción:"
+            );
+            opcion = Integer.parseInt(entrada);
+
+            switch (opcion) {
+                case 7:
+                    Nivel2.metodo7();
+                    break;
+                case 8:
+                    Nivel2.metodo8();
+                    break;
+                case 0:
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción no válida.");
+            }
+        } while (opcion != 0);
+    } 
 
 }
