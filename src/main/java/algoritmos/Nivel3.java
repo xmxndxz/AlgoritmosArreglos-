@@ -38,4 +38,27 @@ import javax.swing.JOptionPane;
     }
 
     public static void metodo12() {
+        String texto = JOptionPane.showInputDialog("Ingrese una palabra o frase:");
+        char[] letras = texto.toCharArray(); 
+
+        int vocales = 0;     // contador de vocales
+        int consonantes = 0; // contador de consonantes
+        int otros = 0;       // contador de otros símbolos.(como espacios , etc)
+
+        for (int i = 0; i < letras.length; i++) {
+            char c = Character.toLowerCase(letras[i]);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vocales++;
+            } else if (c >= 'a' && c <= 'z') {
+                consonantes++;
+            } else {
+                otros++;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null,
+                "Vocales: " + vocales
+                + "\nConsonantes: " + consonantes
+                + "\nOtros símbolos: " + otros);
     }
+
