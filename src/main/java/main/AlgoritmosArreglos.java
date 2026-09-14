@@ -3,7 +3,7 @@
  */
 
 package main;
-
+import algoritmos.Menu;
 /**
  *
  * @author amand
@@ -11,6 +11,6 @@ package main;
 public class AlgoritmosArreglos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Menu.iniciar();
     }
 }

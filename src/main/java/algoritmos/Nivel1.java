@@ -12,6 +12,24 @@ import javax.swing.JOptionPane;
  */
 public class Nivel1 {
 
+//método algoritmo 1
+public static void metodo1(){
+
+    double[] numeros ={2.3, 8.8, 9.3, 6.1};
+    JOptionPane.showMessageDialog(null, numeros.length + "longitud del arreglo");
+    JOptionPane.showMessageDialog(null, "Último elemento: "  + numeros[numeros.length-1]);
+}
+        
+//método algoritmo 2
+public static void metodo2(){
+boolean[] valores = new boolean[6];
+for (int i = 0; i < valores.length; i++) {
+    JOptionPane.showMessageDialog(null,
+        "Posición " + i + ": " + valores[i]);
+}
+}
+
+    
     //Algoritmo 3
     public static void metodo3() {
         int[] numeros = new int[8]; 
