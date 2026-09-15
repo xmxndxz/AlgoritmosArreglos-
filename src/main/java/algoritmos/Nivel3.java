@@ -10,9 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author amand
  */
-  
-
-    public class Nivel3 {
+public class Nivel3 {
 
     
     public static void metodo9() {
@@ -106,14 +104,13 @@ import javax.swing.JOptionPane;
                     contador++;
                 }
             }
-
             JOptionPane.showMessageDialog(null,
-                    "El valor " + buscado + " aparece " + contador + " vez(es) en el arreglo.");
+        "El valor " + buscado + " aparece " + contador + " vez(es) en el arreglo.");
         }
-
+        
     public static void metodo12() {
         String texto = JOptionPane.showInputDialog("Ingrese una palabra o frase:");
-        char[] letras = texto.toCharArray(); 
+        char[] letras = texto.toCharArray();
 
         int vocales = 0;     // contador de vocales
         int consonantes = 0; // contador de consonantes
@@ -137,3 +134,4 @@ import javax.swing.JOptionPane;
     }
     
     }
+

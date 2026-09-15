@@ -31,13 +31,13 @@ public class Menu {
                     menuNivel2();
                     break;
                 case 3:
-                    //menuNivel3();
+                    menuNivel3();
                     break;
                 case 4:
-                    // menuNivel4();
+                    menuNivel4();
                     break;
                 case 5:
-                    //menuNivel5();
+                    menuNivel5();
                     break;
                 case 0:
                     JOptionPane.showMessageDialog(null, "Saliendo del programa...");
@@ -55,7 +55,7 @@ public class Menu {
             String entrada = JOptionPane.showInputDialog(
                     "NIVEL 1\n"
                     + "1. Longitud y último elemento\n"
-                    + "1. Mostrar posición boleanos\n"
+                    + "2. Mostrar posición boleanos\n"
                     + "3. Leer 8 números y mostrarlos\n"
                     + "4. Palabra a arreglo de caracteres\n"
                     + "0. Volver al menú principal\n"
@@ -127,7 +127,9 @@ public class Menu {
                     JOptionPane.showMessageDialog(null, "Opción no válida.");
             }
         } while (opcion != 0);
-    } 
+    }
+
+   
 
  private static void menuNivel3() {
     int opcion;
@@ -182,6 +184,8 @@ public class Menu {
                 "NIVEL 4\n"
                 + "13. Invertir un arreglo\n"
                 + "14. Copia independiente de un arreglo\n"
+                + "15. Rotar arreglo a la derecha\n"
+                + "16. Intercambiar valores por índices\n"
                 + "0. Volver al menú principal\n"
                 + "Seleccione una opción:"
         );
@@ -195,6 +199,12 @@ public class Menu {
             case 14:
                 Nivel4.metodo14();
                 break;
+            case 15:
+                Nivel4.metodo15();
+                break;
+            case 16:
+                Nivel4.metodo16();
+                break;
             case 0:
                 break;
             default:
@@ -202,7 +212,7 @@ public class Menu {
         }
 
     } while (opcion != 0);
-}
+ }
  
  private static void menuNivel5() {
     int opcion;
@@ -210,6 +220,8 @@ public class Menu {
     do {
         String entrada = JOptionPane.showInputDialog(
                 "NIVEL 5\n"
+                + "17. Sumar dos arreglos\n"
+                + "18. Comparar precios y diferencias\n"
                 + "19. Arreglo ordenado de forma ascendente\n"
                 + "20. Determinar si un arreglo es capicúa\n"
                 + "0. Volver al menú principal\n"
@@ -219,6 +231,12 @@ public class Menu {
         opcion = Integer.parseInt(entrada);
 
         switch (opcion) {
+            case 17:
+                Nivel5.metodo17();
+                break;
+            case 18:
+                Nivel5.metodo18();
+                break;
             case 19:
                 Nivel5.metodo19();
                 break;
@@ -232,6 +250,5 @@ public class Menu {
         }
 
     } while (opcion != 0);
+ }
 }
-}
-

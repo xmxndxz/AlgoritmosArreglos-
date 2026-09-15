@@ -35,7 +35,7 @@ for (int i = 0; i < valores.length; i++) {
         int[] numeros = new int[8]; 
 
         for (int i = 0; i < numeros.length; i++) {
-            String entrada = JOptionPane.showInputDialog("Ingrese el número entero #" + (i + 1) + " de 8:");
+            String entrada = JOptionPane.showInputDialog("Ingrese un número entero, #" + (i + 1) + " de 8:");
             numeros[i] = Integer.parseInt(entrada);
         }
 
