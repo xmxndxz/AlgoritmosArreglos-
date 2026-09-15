@@ -54,6 +54,8 @@ public class Menu {
         do {
             String entrada = JOptionPane.showInputDialog(
                     "NIVEL 1\n"
+                    + "1. Longitud y último elemento\n"
+                    + "2. Mostrar posición boleanos\n"
                     + "3. Leer 8 números y mostrarlos\n"
                     + "4. Palabra a arreglo de caracteres\n"
                     + "0. Volver al menú principal\n"
@@ -62,6 +64,15 @@ public class Menu {
             opcion = Integer.parseInt(entrada);
 
             switch (opcion) {
+                
+                case 1:
+                    Nivel1.metodo1();
+                    break;
+                
+                case 2:
+                     Nivel1.metodo2();
+                break;
+                    
                 case 3:
                     Nivel1.metodo3();
                     break;
@@ -82,6 +93,8 @@ public class Menu {
         do {
             String entrada = JOptionPane.showInputDialog(
                     "NIVEL 2\n"
+                    + "5. promedio de 8 números decimales\n"
+                    + "6. Asistencia y porcentajes\n"
                     + "7. Contar vocales en una palabra\n"
                     + "8. Suma en índices pares e impares\n"
                     + "0. Volver al menú principal\n"
@@ -90,6 +103,18 @@ public class Menu {
             opcion = Integer.parseInt(entrada);
 
             switch (opcion) {
+                
+              
+                    
+                    
+                case 5:
+                    Nivel2.metodo5();
+                    break; 
+                
+                case 6:
+                    Nivel2.metodo6();
+                    break;
+                    
                 case 7:
                     Nivel2.metodo7();
                     break;
@@ -104,88 +129,126 @@ public class Menu {
         } while (opcion != 0);
     }
 
-    // Submenú Nivel 3
-    private static void menuNivel3() {
-        int opcion;
-        do {
-            String entrada = JOptionPane.showInputDialog(
-                    "NIVEL 3\n"
-                    + "11. Frecuencia de un valor en el arreglo\n"
-                    + "12. Clasificar vocales, consonantes y otros\n"
-                    + "0. Volver al menú principal\n"
-                    + "Seleccione una opción:"
-            );
-            opcion = Integer.parseInt(entrada);
+   
 
-            switch (opcion) {
-                case 11:
-                    Nivel3.metodo11();
-                    break;
-                case 12:
-                    Nivel3.metodo12();
-                    break;
-                case 0:
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opción no válida.");
-            }
-        } while (opcion != 0);
-    }
-    // Submenú Nivel 4
+ private static void menuNivel3() {
+    int opcion;
 
-    private static void menuNivel4() {
-        int opcion;
-        do {
-            String entrada = JOptionPane.showInputDialog(
-                    "NIVEL 4\n"
-                    + "15. Rotar arreglo una posición a la derecha\n"
-                    + "16. Intercambiar valores en dos índices válidos\n"
-                    + "0. Volver al menú principal\n"
-                    + "Seleccione una opción:"
-            );
-            opcion = Integer.parseInt(entrada);
+    do {
+        String entrada = JOptionPane.showInputDialog(
+                "NIVEL 3\n"
+                + "9. Mayor y menor\n"
+                + "10. Buscar primera posición\n"
+                + "11. Contar apariciones de un valor\n"
+                + "12. Contar vocales, consonantes y otros símbolos\n"
+                + "0. Volver al menú principal\n"
+                + "Seleccione una opción:"
+        );
 
-            switch (opcion) {
-                case 15:
-                    Nivel4.metodo15();
-                    break;
-                case 16:
-                    Nivel4.metodo16();
-                    break;
-                case 0:
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opción no válida.");
-            }
-        } while (opcion != 0);
-    }
+        opcion = Integer.parseInt(entrada);
 
-    // Submenú Nivel 5
-    private static void menuNivel5() {
-        int opcion;
-        do {
-            String entrada = JOptionPane.showInputDialog(
-                    "NIVEL 5\n"
-                    + "17. Suma de dos arreglos en paralelo\n"
-                    + "18. Diferencia absoluta de precios y promedio\n"
-                    + "0. Volver al menú principal\n"
-                    + "Seleccione una opción:"
-            );
-            opcion = Integer.parseInt(entrada);
+        switch (opcion) {
 
-            switch (opcion) {
-                case 17:
-                    Nivel5.metodo17();
-                    break;
-                case 18:
-                    Nivel5.metodo18();
-                    break;
-                case 0:
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opción no válida.");
-            }
-        } while (opcion != 0);
-    }
+            case 9:
+                Nivel3.metodo9();
+                break;
 
+            case 10:
+                Nivel3.metodo10();
+                break;
+
+            case 11:
+                Nivel3.metodo11();
+                break;
+
+            case 12:
+                Nivel3.metodo12();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                JOptionPane.showMessageDialog(null, "Opción no válida.");
+        }
+
+    } while (opcion != 0);
+}   
+
+ 
+ private static void menuNivel4() {
+    int opcion;
+
+    do {
+        String entrada = JOptionPane.showInputDialog(
+                "NIVEL 4\n"
+                + "13. Invertir un arreglo\n"
+                + "14. Copia independiente de un arreglo\n"
+                + "15. Rotar arreglo a la derecha\n"
+                + "16. Intercambiar valores por índices\n"
+                + "0. Volver al menú principal\n"
+                + "Seleccione una opción:"
+        );
+
+        opcion = Integer.parseInt(entrada);
+
+        switch (opcion) {
+            case 13:
+                Nivel4.metodo13();
+                break;
+            case 14:
+                Nivel4.metodo14();
+                break;
+            case 15:
+                Nivel4.metodo15();
+                break;
+            case 16:
+                Nivel4.metodo16();
+                break;
+            case 0:
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Opción no válida.");
+        }
+
+    } while (opcion != 0);
+ }
+ 
+ private static void menuNivel5() {
+    int opcion;
+
+    do {
+        String entrada = JOptionPane.showInputDialog(
+                "NIVEL 5\n"
+                + "17. Sumar dos arreglos\n"
+                + "18. Comparar precios y diferencias\n"
+                + "19. Arreglo ordenado de forma ascendente\n"
+                + "20. Determinar si un arreglo es capicúa\n"
+                + "0. Volver al menú principal\n"
+                + "Seleccione una opción:"
+        );
+
+        opcion = Integer.parseInt(entrada);
+
+        switch (opcion) {
+            case 17:
+                Nivel5.metodo17();
+                break;
+            case 18:
+                Nivel5.metodo18();
+                break;
+            case 19:
+                Nivel5.metodo19();
+                break;
+            case 20:
+                Nivel5.metodo20();
+                break;
+            case 0:
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Opción no válida.");
+        }
+
+    } while (opcion != 0);
+ }
 }

@@ -12,28 +12,102 @@ import javax.swing.JOptionPane;
  */
 public class Nivel3 {
 
-    public static void metodo11() {
-        int[] numeros = new int[12];
+    
+    public static void metodo9() {
 
-        for (int i = 0; i < numeros.length; i++) {
-            String entrada = JOptionPane.showInputDialog("Ingrese el número #" + (i + 1) + " de 12:");
-            numeros[i] = Integer.parseInt(entrada);
-        }
+    int[] numeros = new int[10];
 
-        String entradaBuscado = JOptionPane.showInputDialog("Ingrese el valor que desea buscar en el arreglo:");
-        int buscado = Integer.parseInt(entradaBuscado);
-
-        int contador = 0; // contador de apariciones
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == buscado) {
-                contador++;
-            }
-        }
-
-        JOptionPane.showMessageDialog(null,
-                "El valor " + buscado + " aparece " + contador + " vez(es) en el arreglo.");
+    // Leer los 10 números
+    for (int i = 0; i < numeros.length; i++) {
+        numeros[i] = Integer.parseInt(
+                JOptionPane.showInputDialog(
+                        "Ingrese el número " + (i + 1)
+                )
+        );
     }
 
+    // El mayor y el menor empiezan con el primer elemento
+    int mayor = numeros[0];
+    int menor = numeros[0];
+
+    // Buscar el mayor y el menor
+    for (int i = 1; i < numeros.length; i++) {
+
+        if (numeros[i] > mayor) {
+            mayor = numeros[i];
+        }
+
+        if (numeros[i] < menor) {
+            menor = numeros[i];
+        }
+    }
+
+    JOptionPane.showMessageDialog(null,
+            "El número mayor es: " + mayor
+            + "\nEl número menor es: " + menor);
+}
+        
+        
+    
+    public static void metodo10() {
+
+    int[] numeros = new int[10];
+
+    // Leer los números del arreglo
+    for (int i = 0; i < numeros.length; i++) {
+        numeros[i] = Integer.parseInt(
+                JOptionPane.showInputDialog(
+                        "Ingrese el número " + (i + 1)
+                )
+        );
+    }
+
+    // Pedir el número que se desea buscar
+    int buscado = Integer.parseInt(
+            JOptionPane.showInputDialog(
+                    "Ingrese el número que desea buscar"
+            )
+    );
+
+    int posicion = -1;
+
+    // Buscar la primera posición
+    for (int i = 0; i < numeros.length; i++) {
+
+        if (numeros[i] == buscado) {
+            posicion = i;
+            break;
+        }
+    }
+
+    JOptionPane.showMessageDialog(null,
+            "Posición: " + posicion);
+}
+    
+    
+    
+    
+        public static void metodo11() {
+            int[] numeros = new int[12];
+
+            for (int i = 0; i < numeros.length; i++) {
+                String entrada = JOptionPane.showInputDialog("Ingrese el número #" + (i + 1) + " de 12:");
+                numeros[i] = Integer.parseInt(entrada);
+            }
+
+            String entradaBuscado = JOptionPane.showInputDialog("Ingrese el valor que desea buscar en el arreglo:");
+            int buscado = Integer.parseInt(entradaBuscado);
+
+            int contador = 0; // contador de apariciones
+            for (int i = 0; i < numeros.length; i++) {
+                if (numeros[i] == buscado) {
+                    contador++;
+                }
+            }
+            JOptionPane.showMessageDialog(null,
+        "El valor " + buscado + " aparece " + contador + " vez(es) en el arreglo.");
+        }
+        
     public static void metodo12() {
         String texto = JOptionPane.showInputDialog("Ingrese una palabra o frase:");
         char[] letras = texto.toCharArray();
@@ -58,4 +132,6 @@ public class Nivel3 {
                 + "\nConsonantes: " + consonantes
                 + "\nOtros símbolos: " + otros);
     }
-}
+    
+    }
+

@@ -9,6 +9,57 @@ import javax.swing.JOptionPane;
   //@author amand AmandaAR
  
 public class Nivel2 {
+    
+public static void metodo5() {
+
+    double[] numeros = new double[8];
+    double suma = 0;
+
+    for (int i = 0; i < numeros.length; i++) {
+
+        numeros[i] = Double.parseDouble(
+                JOptionPane.showInputDialog("Ingrese el número " + (i + 1))
+        );
+
+        suma = suma + numeros[i];
+    }
+
+    double promedio = suma / numeros.length;
+
+    JOptionPane.showMessageDialog(null,
+            "El promedio es: " + promedio);
+    }
+     
+     
+public static void metodo6() {
+
+    boolean[] asistencias = {
+        true, true, false, true, true,
+        false, true, true, true, false,
+        true, false, true, true, true,
+        true, false, true, true, false
+    };
+
+    int asistieron = 0;
+    int faltaron = 0;
+
+    for (int i = 0; i < asistencias.length; i++) {
+
+        if (asistencias[i] == true) {
+            asistieron++;
+        } else {
+            faltaron++;
+        }
+    }
+
+    double porcentaje = (asistieron * 100.0) / asistencias.length;
+
+    JOptionPane.showMessageDialog(null,
+            "Asistieron: " + asistieron
+            + "\nFaltaron: " + faltaron
+            + "\nPorcentaje de asistencia: " + porcentaje + "%");
+}
+     
     // Algoritmo 7
     public static void metodo7() {
         String palabra = JOptionPane.showInputDialog("Ingrese una palabra o frase:");
